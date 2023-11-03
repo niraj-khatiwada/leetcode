@@ -1,18 +1,15 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 public class Main {
 
 
     public static void main(String[] args) {
 
-        int[] list = new int[2];
-        List<Integer>[] indexMapper = new ArrayList[2];
-        List<Integer> l = new ArrayList<>(Arrays.asList(1));
-        l.add(100);
-        indexMapper[0] = l;
-        System.out.println((Arrays.toString(indexMapper)));
+        Queue<Integer> queue = new PriorityQueue<>();
+        queue.add(1);
+        System.out.println(queue.remove());
+        System.out.println(queue.peek());
     }
 
 
