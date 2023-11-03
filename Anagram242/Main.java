@@ -1,4 +1,4 @@
-package Anagram;
+package Anagram242;
 
 public class Main {
 
