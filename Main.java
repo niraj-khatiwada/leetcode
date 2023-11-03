@@ -1,53 +1,19 @@
-
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.List;
 
 public class Main {
 
-    private static class BooleanHashHash{
-        boolean isAnagram;
-        int hash1;
-        int hash2;
-    }
 
     public static void main(String[] args) {
-        System.out.println(isAnagram("ab", "ba").isAnagram);
-        System.out.println(isAnagram("ab", "ba").hash1);
-        System.out.println(isAnagram("ab", "ba").hash2);
+
+        int[] list = new int[2];
+        List<Integer>[] indexMapper = new ArrayList[2];
+        List<Integer> l = new ArrayList<>(Arrays.asList(1));
+        l.add(100);
+        indexMapper[0] = l;
+        System.out.println((Arrays.toString(indexMapper)));
     }
 
-    public static BooleanHashHash isAnagram(String s, String t){
-        BooleanHashHash booleanHashHash = new BooleanHashHash();
-
-        int[] count = new int[26];
-
-        char[] hashListS = new char[26];
-        char[] hashListT = new char[26];
-
-        for(int i = 0; i < s.length(); i++){
-            count[s.charAt(i) - 'a']++;
-            count[t.charAt(i) - 'a']--;
-
-            hashListS[s.charAt(i) - 'a']++;
-            hashListT[t.charAt(i) - 'a']++;
-        }
-        booleanHashHash.hash1 = new String(hashListS).hashCode();
-        booleanHashHash.hash2 = new String(hashListT).hashCode();
-        if(s.length() != t.length()){
-            booleanHashHash.isAnagram=false;
-            return booleanHashHash;
-        }
-
-        for(int i =0; i < s.length(); i++){
-            if(count[i] != 0){
-                booleanHashHash.isAnagram=false;
-                return booleanHashHash;
-            }
-        }
-
-        booleanHashHash.isAnagram= true;
-        return booleanHashHash;
-    }
 
 }
