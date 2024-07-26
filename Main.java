@@ -1,11 +1,18 @@
 
-import ContainsDuplicate217.ContainsDuplicate;
+import GroupAnagrams49.GroupAnagrams;
 
 public class Main {
     public static void main(String[] args) {
-        var d = new ContainsDuplicate();
+        var count = new int[26];
+        count[25]++;
+        count[0]++;
+        System.out.println(count.toString());
+        var d = new GroupAnagrams();
 
-        System.out.println(d.hasDuplicate(new int[] { 1, 2, 3, 3 }));
+        d.groupAnagrams(new String[] { "act", "pots", "tops", "cat", "stop", "hat" });
+
     }
 
 }
+
+// [I@7344699f
