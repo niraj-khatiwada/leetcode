@@ -5,6 +5,9 @@ import java.util.HashMap;
 public class ValidAnagram {
     // Using HashMap
     public boolean isAnagram(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
         var map = new HashMap<Character, Integer>();
 
         for (var character : s.toCharArray()) {
@@ -31,6 +34,9 @@ public class ValidAnagram {
     // Using array index
     // Only supports Unicode
     public boolean isAnagramUsingArrayIndex(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
         var array = new int[255];
 
         for (var character : s.toCharArray()) {
