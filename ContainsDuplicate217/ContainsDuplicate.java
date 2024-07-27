@@ -2,6 +2,7 @@ package ContainsDuplicate217;
 
 import java.util.HashSet;
 
+// EASY
 public class ContainsDuplicate {
     public boolean hasDuplicate(int[] nums) {
         var set = new HashSet<Integer>();
