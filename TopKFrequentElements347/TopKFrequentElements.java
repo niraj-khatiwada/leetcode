@@ -4,6 +4,11 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
+// MEDIUM
+
+/*
+ * K most frequent elements = k most repeated elements = for eg: 2 most repeated elements in [1, 2, 2] is [2, 1]. Order does not matter.
+ */
 public class TopKFrequentElements {
     // O(n)
     public int[] topKFrequent(int[] nums, int k) {
