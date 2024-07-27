@@ -58,4 +58,23 @@ public class ValidAnagram {
         return true;
     }
 
+    // Similar to above 2nd approach but comparing hash key
+    // Only works for English alphabets.
+    public boolean isAnagramUsingHashKey(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+
+        var arrayS = new char[26];
+        for (var ch : s.toCharArray()) {
+            arrayS[ch - 'a']++;
+        }
+
+        var arrayT = new char[26];
+        for (var ch : t.toCharArray()) {
+            arrayT[ch - 'a']++;
+        }
+
+        return (new String(arrayS)).equals(new String(arrayT));
+    }
 }
