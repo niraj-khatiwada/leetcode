@@ -1,18 +1,25 @@
+import EncodeAndDecodeString1980.EncodeAndDecodeString;
 
+import java.util.List;
 import java.util.ArrayList;
-import java.util.Arrays;
-
-import TopKFrequentElements347.TopKFrequentElements;
 
 public class Main {
     public static void main(String[] args) {
 
-        var a = new TopKFrequentElements();
+        var a = new EncodeAndDecodeString();
 
-        var result = a.topKFrequent(new int[] { 1, 2 }, 2);
+        List<String> list = new ArrayList<String>();
+        list.add("we");
+        list.add("say");
+        list.add(":");
+        list.add("yes");
+        list.add("/");
+        list.add("\"!@#$%^&*()\"");
 
-        System.out.println(Arrays.toString(result));
+        var encoded = a.encode(list);
+        System.out.println(encoded);
 
+        System.out.println(a.decode(encoded));
     }
 
 }
