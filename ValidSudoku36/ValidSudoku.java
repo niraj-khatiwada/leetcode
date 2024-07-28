@@ -11,7 +11,7 @@ public class ValidSudoku {
     // Using HashMap Method
     // O(n^2). Only looped once. Highly efficient
     // But this takes extra spaces for 3 hash maps
-    public boolean isValidSudokuUsingHashMapMethod(char[][] board) {
+    public boolean isValidSudoku(char[][] board) {
         Map<String, Set<Character>> rowMap = new HashMap<>();
         Map<String, Set<Character>> columnMap = new HashMap<>();
         Map<String, Set<Character>> gridMap = new HashMap<>();
@@ -55,7 +55,7 @@ public class ValidSudoku {
     // O(n^2) * 3 ~ O(n^2)
     // You need to do nested operation three times so less efficient
     // No extra spaces is allocated though
-    public boolean isValidSudoku(char[][] board) {
+    public boolean isValidSudokuClassic(char[][] board) {
         // Rows
         for (var i = 0; i < 9; i++) {
             var set = new HashSet<Character>();
