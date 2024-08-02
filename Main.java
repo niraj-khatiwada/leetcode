@@ -1,10 +1,10 @@
-import ReverseBits190.ReverseBits;
+import ReverseInteger7.ReverseInteger;
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        var r = new ReverseBits();
-        System.out.println(r.reverseBits(21));
+        var r = new ReverseInteger();
+        System.out.println(r.reverse(1534236469));
     }
 
 }
