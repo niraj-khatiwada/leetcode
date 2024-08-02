@@ -7,12 +7,13 @@ public class ReverseInteger {
         x = Math.abs(x);
         while (x != 0) {
             var rem = x % 10;
-            r = (r * 10) + rem;
-            if (r >= (Integer.MAX_VALUE / 10) || (r >= (Integer.MAX_VALUE - rem) / 10)) {
+            // We need to check overflow before assigning
+            if (r > (Integer.MAX_VALUE / 10) || (r > ((Integer.MAX_VALUE - rem) / 10))) {
                 // Overflowed
                 r = 0;
                 break;
             }
+            r = (r * 10) + rem;
             x /= 10;
         }
         return sign * r;
