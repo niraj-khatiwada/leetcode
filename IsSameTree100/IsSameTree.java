@@ -15,6 +15,7 @@ public class IsSameTree {
 
     public boolean isSameTree(Node p, Node q) {
         return this._isSameTree(p, q);
+
     }
 
     private boolean _isSameTree(Node p, Node q) {
