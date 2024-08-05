@@ -19,6 +19,7 @@ public class BinaryTreeMaximumPathSum {
         return rs[0];
     }
 
+    // O(n)
     private int _maxPathSum(Node node, int[] rs) {
         if (node == null) {
             return Integer.MIN_VALUE;
