@@ -30,17 +30,10 @@ public class BinaryTreeMaximumPathSum {
         var loffset = lmax == Integer.MIN_VALUE ? 0 : lmax;
         var roffset = rmax == Integer.MIN_VALUE ? 0 : rmax;
 
-        var max = Integer.MIN_VALUE;
-
         var lrmax = Math.max(node.value, Math.max(loffset + node.value, roffset + node.value));
         var l = new int[] { lmax, rmax, lrmax, loffset + roffset + node.value };
         for (var v : l) {
-            if (v > max) {
-                max = v;
-            }
-        }
-        if (max > rs[0]) {
-            rs[0] = max;
+            rs[0] = Math.max(rs[0], v);
         }
         return lrmax;
     }
