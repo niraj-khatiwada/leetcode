@@ -1,11 +1,22 @@
 import java.util.*;
-import ConvertSortedListToBST109.ConvertSortedListToBST;
 
 public class Main {
     public static void main(String[] args) {
-        var r = new ConvertSortedListToBST();
-        var abc = r.sortedListToBST();
-        r.bfsUsingQueue(abc);
+
+        int[][] rs = new int[2][2];
+        rs[0] = new int[] { 1, 2 };
+        rs[1] = new int[] { 1, 3 };
+
+        Arrays.sort(rs, (a, b) -> calculateDistance(a) - calculateDistance(b));
+
+        for (var p : rs) {
+            System.out.println(Arrays.toString(p));
+
+        }
+    }
+
+    private static int calculateDistance(int[] point) {
+        return point[0] * point[0] + point[1] * point[1];
     }
 
 }
