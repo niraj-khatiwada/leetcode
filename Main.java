@@ -1,11 +1,17 @@
 import java.util.*;
-import TaskScheduler621.TaskScheduler;
+import DesignAddAndSearchDataStructures211.DesignAddAndSearchDataStructures;
 
 public class Main {
     public static void main(String[] args) {
 
-        var task = new TaskScheduler();
-        System.out.println(task.leastInterval(new char[] { 'A', 'A', 'A', 'B', 'B', 'B' }, 2));
+        var trie = new DesignAddAndSearchDataStructures();
+        trie.addWord("cat");
+        trie.addWord("car");
+        trie.addWord("care");
+        trie.addWord("bat");
+        trie.addWord("cater");
+
+        System.out.println(trie.search("c..e"));
 
     }
 
