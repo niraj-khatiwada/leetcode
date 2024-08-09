@@ -38,9 +38,8 @@ public class DesignAddAndSearchDataStructures {
 
     public boolean search(String word) {
         var queue = new ArrayDeque<Node>();
-        queue.add(this.root);
+        queue.offer(this.root);
         var i = 0;
-        var isEnd = false;
         while (!queue.isEmpty()) {
             var isLastIndex = i == (word.length() - 1);
             if (i >= word.length()) {
@@ -54,10 +53,9 @@ public class DesignAddAndSearchDataStructures {
                 if (ch != '.') {
                     var child = pop.children[index];
                     if (child != null) {
-                        queue.add(child);
+                        queue.offer(child);
                         if (isLastIndex && child.isEnd) {
-                            isEnd = true;
-                            break;
+                            return true;
                         }
                     }
                 } else {
@@ -66,15 +64,14 @@ public class DesignAddAndSearchDataStructures {
                             continue;
                         }
                         if (isLastIndex && n.isEnd) {
-                            isEnd = true;
-                            break;
+                            return true;
                         }
-                        queue.add(n);
+                        queue.offer(n);
                     }
                 }
             }
             i++;
         }
-        return isEnd;
+        return false;
     }
 }
