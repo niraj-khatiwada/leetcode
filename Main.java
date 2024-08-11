@@ -1,17 +1,17 @@
 import java.util.*;
-import DesignAddAndSearchDataStructures211.DesignAddAndSearchDataStructures;
+import CountNumberOfIslands200.UsingBFS;
 
 public class Main {
     public static void main(String[] args) {
 
-        var trie = new DesignAddAndSearchDataStructures();
-        trie.addWord("cat");
-        trie.addWord("car");
-        trie.addWord("care");
-        trie.addWord("bat");
-        trie.addWord("cater");
+        var a = new UsingBFS();
 
-        System.out.println(trie.search("c..e"));
+        System.out.println(a.numIslands(new char[][] {
+                { '0', '1', '1', '1', '0' },
+                { '0', '1', '0', '1', '0' },
+                { '1', '1', '0', '0', '0' },
+                { '0', '0', '0', '0', '0' }
+        }));
 
     }
 
