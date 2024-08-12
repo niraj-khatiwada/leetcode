@@ -3,13 +3,13 @@ package CloneGraph133;
 import java.util.*;
 
 public class CloneGraph133 {
-    private class NodeEntry {
-        public Node node;
-        public Node ref;
 
-        public NodeEntry(Node node, Node ref) {
-            this.node = node;
-            this.ref = ref;
+    private class Node {
+        public int val;
+        public List<Node> neighbors;
+
+        public Node(int val) {
+            this.val = val;
         }
     }
 
@@ -18,19 +18,19 @@ public class CloneGraph133 {
             return null;
         }
         var map = new HashMap<Integer, Node>();
-        var queue = new ArrayDeque<NodeEntry>();
-        queue.add(new NodeEntry(new Node(node.val), node));
-        while (!queue.isEmpty()) {
-            var entry = queue.poll();
-            for (var n : entry.ref.neighbors) {
-                var newNode = map.get(n.val) == null ? new Node(n.val) : map.get(n.val);
-                entry.node.neighbors.add(newNode);
-                if (!map.containsKey(n.val)) {
-                    queue.add(new NodeEntry(newNode, n));
-                }
-            }
-            map.put(entry.node.val, entry.node);
-        }
-        return map.get(node.val);
+        return this._dfs(node, map);
     }
+
+    private Node _dfs(Node node, Map<Integer, Node> map) {
+        if (map.containsKey(node.val)) {
+            return map.get(node.val);
+        }
+        var copy = new Node(node.val);
+        map.put(node.val, copy);
+        for (var n : node.neighbors) {
+            copy.neighbors.add(_dfs(n, map));
+        }
+        return copy;
+    }
+
 }
