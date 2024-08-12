@@ -1,22 +1,13 @@
 import java.util.*;
 
-import IslandsAndTreasures.IslandAndTreasures;
+import RottingOranges994.RottingOranges994;
 
 public class Main {
     public static void main(String[] args) {
-        var island = new IslandAndTreasures();
+        var oranges = new RottingOranges994();
 
-        var grid = new int[][] {
-                { 2147483647, 2147483647, 2147483647 },
-                { 2147483647, -1, 2147483647 },
-                { 0, 2147483647, 2147483647 },
-        };
+        System.out.println(oranges.orangesRotting(new int[][] { { 2, 1, 1 }, { 1, 1, 1 }, { 0, 1, 2 } }));
 
-        island.islandsAndTreasure(grid);
-
-        // for (var i = 0; i < grid.length; i++) {
-        // System.out.println(Arrays.toString(grid[i]));
-        // }
     }
 
 }
