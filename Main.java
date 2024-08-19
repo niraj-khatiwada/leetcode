@@ -1,11 +1,11 @@
 import java.util.*;
 
-import ValidPalindromeII680.ValidPalindrome;
+import Permutations46.Permutations;
 
 public class Main {
     public static void main(String[] args) {
-        var palindrome = new ValidPalindrome();
-        System.out.println(palindrome.validPalindrome("abca"));
+        var bt = new Permutations();
+        System.out.println(bt.permute(new int[] { 1, 2, 3 }));
     }
 
 }
