@@ -1,12 +1,17 @@
 import java.util.*;
 
-import WordSearch79.WordSearch;
+import WordSearchII212.WordSearchII;
 
 public class Main {
     public static void main(String[] args) {
-        var bt = new WordSearch();
-        System.out.println(bt.exist(
-                new char[][] { { 'A', 'B', 'C', 'E' }, { 'S', 'F', 'C', 'S' }, { 'A', 'D', 'E', 'E' } }, "ABCCED"));
+        var bt = new WordSearchII();
+        System.out.println(bt.findWords(
+                new char[][] { { 'o', 'a', 'a', 'n' },
+                        { 'e', 't', 'a', 'e' },
+                        { 'i', 'h', 'k', 'r' }, {
+                                'i', 'f', 'l', 'v'
+                        } },
+                new String[] { "oath", "pea", "eat", "rain" }));
     }
 
 }
