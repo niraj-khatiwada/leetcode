@@ -1,10 +1,12 @@
-package MaximumNumberOfEventsThat1353;
+package MaximumNumberOfEvents1353;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class MaximumNumberOfEvents {
+    // TC: O(nlog(n))
+    // SC: O(n)
     public int maxEvents(int[][] events) {
         Arrays.sort(events, Comparator.comparingInt(x -> x[0]));
         var heap = new PriorityQueue<Integer>();
