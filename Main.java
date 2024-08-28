@@ -1,11 +1,12 @@
 import java.util.*;
 
-import CoinChange322.CoinChange;
+import MaximumProfitInJobScheduling1235.MaximumProfitInJobScheduling;
 
 public class Main {
         public static void main(String[] args) {
-                var coinChange = new CoinChange();
-                System.out.println(coinChange.coinChange(new int[] { 357, 239, 73, 52 }, 9832));
+                var job = new MaximumProfitInJobScheduling();
+                System.out.println(job.jobScheduling(new int[] { 4, 2, 4, 8, 2 }, new int[] { 5, 5, 5, 10, 8 },
+                                new int[] { 1, 2, 8, 10, 4 }));
         }
 
 }
