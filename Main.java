@@ -1,12 +1,12 @@
 import java.util.*;
 
-import MaximumProfitInJobScheduling1235.MaximumProfitInJobScheduling;
+import MostStonesRemoved947.MostStonesRemoved;
 
 public class Main {
         public static void main(String[] args) {
-                var job = new MaximumProfitInJobScheduling();
-                System.out.println(job.jobScheduling(new int[] { 1, 2, 3, 3 }, new int[] { 3, 4, 5, 6 },
-                                new int[] { 50, 10, 40, 70 }));
+                var ds = new MostStonesRemoved();
+                System.out.println(ds.removeStones(
+                                new int[][] { { 0, 0 }, { 0, 1 }, { 1, 0 }, { 1, 2 }, { 2, 1 }, { 2, 2 } }));
         }
 
 }
