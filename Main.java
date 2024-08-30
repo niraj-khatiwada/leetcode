@@ -1,12 +1,12 @@
 import java.util.*;
 
-import MostStonesRemoved947.MostStonesRemoved;
+import NumberOfProvinces547.NumberOfProvinces;
 
 public class Main {
         public static void main(String[] args) {
-                var ds = new MostStonesRemoved();
-                System.out.println(ds.removeStones(
-                                new int[][] { { 0, 0 }, { 0, 1 }, { 1, 0 }, { 1, 2 }, { 2, 1 }, { 2, 2 } }));
+                var ds = new NumberOfProvinces();
+                System.out.println(ds.findCircleNum(
+                                new int[][] { { 1, 1, 0 }, { 1, 1, 0 }, { 0, 0, 1 } }));
         }
 
 }
