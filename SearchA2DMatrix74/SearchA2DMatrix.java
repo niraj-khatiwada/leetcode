@@ -1,6 +1,8 @@
 package SearchA2DMatrix74;
 
 public class SearchA2DMatrix {
+    // O(n*m)
+    // SC: O(n*m)
     public boolean searchMatrix(int[][] matrix, int target) {
         var flatten = new int[matrix.length * matrix[0].length];
         for (var i = 0; i < matrix.length; i++) {
