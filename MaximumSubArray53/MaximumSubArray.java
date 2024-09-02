@@ -1,6 +1,8 @@
 package MaximumSubArray53;
 
 public class MaximumSubArray {
+    // O(n)
+    // Kadane's Algorithm
     public int maxSubArray(int[] nums) {
         var prefix = nums[0];
         var max = nums[0];
