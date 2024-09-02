@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class MinimumAbsoluteSumDifference {
     class Solution {
+
         private static final int MOD = (int) 1e9 + 7;
 
         public int minAbsoluteSumDiff(int[] nums1, int[] nums2) {
@@ -14,7 +15,7 @@ public class MinimumAbsoluteSumDifference {
             }
             // n(log(n))
             Arrays.sort(nums1Copy);
-            var sum = 0;
+            long sum = 0;
             var lastDelta = Integer.MAX_VALUE;
             // n(log(n))
             for (var i = 0; i < nums1.length; i++) {
@@ -25,23 +26,23 @@ public class MinimumAbsoluteSumDifference {
                     if (newAbs < abs) {
                         var newDelta = Math.abs(newAbs - abs);
                         if (newDelta > lastDelta) {
-                            sum = (sum + lastDelta) % MOD;
+                            sum = (sum + lastDelta);
                             lastDelta = newDelta;
-                            sum = (sum + newAbs) % MOD;
+                            sum = (sum + newAbs);
                         } else {
                             if (lastDelta == Integer.MAX_VALUE) {
                                 lastDelta = newDelta;
-                                sum = (sum + newAbs) % MOD;
+                                sum = (sum + newAbs);
                             } else {
-                                sum = (sum + abs) % MOD;
+                                sum = (sum + abs);
                             }
                         }
                     } else {
-                        sum = (sum + abs) % MOD;
+                        sum = (sum + abs);
                     }
                 }
             }
-            return sum;
+            return (int) (sum % MOD);
         }
 
         // log(n)
@@ -65,6 +66,7 @@ public class MinimumAbsoluteSumDifference {
             }
             return closest;
         }
+
     }
 
 }
