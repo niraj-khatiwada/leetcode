@@ -7,24 +7,23 @@ public class FindMissingObservations {
             mSum += roll;
         }
         var nSum = (mean * (rolls.length + n)) - mSum;
-        if (nSum < n || ((double) nSum / n) > 6.0) {
+        if (n > nSum || (n * 6) < nSum) {
             return new int[0];
         }
         var rs = new int[n];
         var c = 0;
         while (n > 0 && ((nSum / n) <= 6)) {
             for (var i = 6; i >= 0; i--) {
-                int maxRoll = nSum / n;
-                if (i <= maxRoll) {
+                if ((nSum - i) >= (n - 1)) {
                     rs[c] = i;
                     c++;
                     nSum -= i;
                     n--;
-                    if (n == 0 && nSum == 0) {
-                        return rs;
-                    }
                     break;
                 }
+            }
+            if (n == 0 && nSum == 0) {
+                return rs;
             }
         }
         return new int[0];
