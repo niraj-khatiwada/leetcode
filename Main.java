@@ -1,13 +1,12 @@
 import java.util.*;
 
-import CheapestFlightsWithKStops787.CheapestFlightsWithKStops;
+import MinimumCostToConnectAllPoints1584.MinimumCostToConnectAllPoints;
 
 public class Main {
         public static void main(String[] args) {
-                var flights = new CheapestFlightsWithKStops();
-                System.out.println(flights.findCheapestPrice(4,
-                                new int[][] { { 0, 1, 1 }, { 0, 2, 3 }, { 1, 2, 1 }, { 2, 3, 1 }, },
-                                0, 3, 1));
+                var flights = new MinimumCostToConnectAllPoints();
+                System.out.println(flights.minCostConnectPoints(
+                                new int[][] { { 0, 0 }, { 2, 2 }, { 3, 10 }, { 5, 2 }, { 7, 0 } }));
 
         }
 }
