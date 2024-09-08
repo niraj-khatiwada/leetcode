@@ -1,13 +1,13 @@
 import java.util.*;
 
-import FindMissingObservations2028.FindMissingObservations;
+import CheapestFlightsWithKStops787.CheapestFlightsWithKStops;
 
 public class Main {
         public static void main(String[] args) {
-                var missing = new FindMissingObservations();
-                for (var i : missing.missingRolls(new int[] { 1, 3, 6, 4, 1, 2, 1, 5, 5, 4 }, 20, 10)) {
-                        System.out.println(i);
-                }
-        }
+                var flights = new CheapestFlightsWithKStops();
+                System.out.println(flights.findCheapestPrice(4,
+                                new int[][] { { 0, 1, 1 }, { 0, 2, 3 }, { 1, 2, 1 }, { 2, 3, 1 }, },
+                                0, 3, 1));
 
+        }
 }
