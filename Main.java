@@ -1,12 +1,10 @@
 import java.util.*;
 
+import FindTheLongestSubstringContainingVowelsInEvenCounts1371.FindTheLongestSubstringContainingVowelsInEvenCounts;
+
 public class Main {
         public static void main(String[] args) {
-                var n = 0;
-                n ^= 2;
-                n ^= 3;
-                n ^= 5;
-                System.out.println(n);
-                System.out.println(1 ^ 1 ^ 2 ^ 3);
+                var str = new FindTheLongestSubstringContainingVowelsInEvenCounts();
+                System.out.println(str.findTheLongestSubstring("eleetminicoworoep"));
         }
 }
