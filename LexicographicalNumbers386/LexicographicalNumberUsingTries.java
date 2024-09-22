@@ -9,6 +9,7 @@ public class LexicographicalNumberUsingTries {
         public Node[] children;
         public boolean isEnd;
         public Node parent;
+        public int childrenCount;
 
         public Node(int value) {
             this.value = value;
@@ -32,6 +33,7 @@ public class LexicographicalNumberUsingTries {
                 node.parent = current;
                 current.children[d] = node;
             }
+            current.childrenCount++;
             current = current.children[d];
         }
         current.isEnd = true;
