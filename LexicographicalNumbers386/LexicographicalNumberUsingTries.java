@@ -3,7 +3,7 @@ package LexicographicalNumbers386;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LexicographicalNumber {
+public class LexicographicalNumberUsingTries {
     private class Node {
         public int value;
         public Node[] children;
