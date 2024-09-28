@@ -1,5 +1,7 @@
 package MyCalendarI729;
 
+import java.util.TreeMap;
+
 public class MyCalendarI {
     private class Node {
         public int start;
@@ -15,6 +17,7 @@ public class MyCalendarI {
 
     public Node root;
 
+    // log(n)
     public boolean book(int start, int end) {
         if (root == null) {
             this.root = new Node(start, end);
@@ -40,6 +43,19 @@ public class MyCalendarI {
             }
 
         }
+        return true;
+    }
+
+    public TreeMap<Integer, Integer> map = new TreeMap<>();
+
+    // Using upper bound technique
+    // o(log(n))
+    public boolean bookMethod2(int start, int end) {
+        var ub = map.higherKey(start); // O(log(n))
+        if (ub != null && end > map.get(ub)) {
+            return false;
+        }
+        map.put(end, start);
         return true;
     }
 }

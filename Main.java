@@ -1,10 +1,15 @@
 import java.util.*;
 
-import KthSmallestInLexicographicalOrder440.KthSmallestInLexicographicalOrder;
+import MyCalendarII731.MyCalendarII;
 
 public class Main {
         public static void main(String[] args) {
-                var str = new KthSmallestInLexicographicalOrder();
-                System.out.println(str.findKthNumber(4289384, 1922239));
+                var cal = new MyCalendarII();
+                System.out.println(cal.book(10, 20));
+                System.out.println(cal.book(50, 60));
+                System.out.println(cal.book(10, 40));
+                System.out.println(cal.book(5, 15));
+                System.out.println(cal.book(5, 10));
+                System.out.println(cal.book(25, 55));
         }
 }
