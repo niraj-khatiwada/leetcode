@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 
+// NOTE: All operations run in O(log(n)) not in O(1)
 public class AllOOneDataStructure {
     public TreeMap<Integer, Set<String>> sortedMap = new TreeMap<>();
     public Map<String, Integer> map = new HashMap<>();
