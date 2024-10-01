@@ -1,12 +1,13 @@
 import java.util.*;
 
-import AllOOneDataStructure432.AllOOneDataStructure;
+import CheckIfArrayPairsAreDivisibleByK1497.CheckIfArrayPairsAreDivisibleByK;
 
 public class Main {
         public static void main(String[] args) {
-                var o1 = new AllOOneDataStructure();
-                o1.inc("abc");
-                o1.inc("abc");
-                System.out.println(o1.getMinKey());
+
+                var c = new CheckIfArrayPairsAreDivisibleByK();
+                c.canArrange(new int[] { -4, -7, 5, 2, 9, 1, 10, 4, -8, -3 }, 3);
+
         }
+
 }
