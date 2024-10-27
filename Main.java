@@ -1,12 +1,16 @@
 import java.util.*;
 
-import CheckIfArrayPairsAreDivisibleByK1497.CheckIfArrayPairsAreDivisibleByK;
+import CountSquaresSubmatricesWithAllOnes1277.CountSquaresSubmatricesWithAllOnes;
 
 public class Main {
         public static void main(String[] args) {
 
-                var c = new CheckIfArrayPairsAreDivisibleByK();
-                c.canArrange(new int[] { -4, -7, 5, 2, 9, 1, 10, 4, -8, -3 }, 3);
+                var c = new CountSquaresSubmatricesWithAllOnes();
+                // c.countSquares(new int[][] { { 0, 0, 0 }, { 0, 1, 0 }, { 0, 1, 0 }, { 1, 1, 1
+                // }, { 1, 1, 0 } });
+                c.countSquares(new int[][] { { 0, 1, 1, 1 },
+                                { 1, 1, 1, 1 },
+                                { 0, 1, 1, 1 } });
 
         }
 
